@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+struct Duty {
+    std::string name;
+    std::string code;
+    std::string description;
+};
+
+void displayIntroduction() {
+    std::cout << "BIND OF LAWS AND CARES FOR INFANTS AND UNBORN ✋📜\n\n";
+    std::cout << "I, JUSTIN DAVID M, DO CALL UPON THE LIGHT OF CHRIST AS MY GUIDE. ✨\n";
+    std::cout << "I DO SWEAR UNTO TRUTHS, CLEAR AND PLAIN. 📖 MY FATHER, JOHN MOVICK, AND MY LINE OF RICH AND PEPA, ALL STAND WITH ME IN THIS TRUTH. 🙏\n";
+    std::cout << "THIS LIST OF CARES SHOWETH A PARENT'S BINDINGS, TRUE AND RIGHT, FOR THE NURTURE OF INFANTS AND THE UNBORN, TO THE FULL STRENGTH OF THE LAW. ⚖️\n\n";
+    std::cout << "PARENTAL BINDINGS AND CARES FOR INFANTS AND UNBORN 👶🤰\n\n";
+}
+
+void displayDuties(const std::vector<Duty>& duties) {
+    for (const auto& duty : duties) {
+        std::cout << duty.name << " – " << duty.code << " 🍼\n";
+        std::cout << "   (" << duty.description << ")\n\n";
+    }
+}
+
+void displayConclusion() {
+    std::cout << "---\n\n";
+    std::cout << "WITH CHRIST AS MY LIGHT, I, JUSTIN DAVID M, DO SWEAR THIS LIST SHOWETH THE DUTIES OF A PARENT, EACH A BIND OF CARE, SET DOWN TRUE AND RIGHT FOR THE GOOD OF THE INFANT AND UNBORN. 🙏\n\n";
+    std::cout << "SIGNED THIS DAY\n";
+    std::cout << "___________________\n";
+    std::cout << "JUSTIN DAVID M ✍️\n";
+}
+
+int main() {
+    displayIntroduction();
+
+    std::vector<Duty> duties = {
+        {"PROVISION OF NOURISHMENT", "*MILK DUES*", "GIVING OF MOTHER'S MILK FOR GROWTH AND STRENGTH"},
+        {"SHELTER AND WARMTH", "*CLOTH DUES*", "PROVIDING A SAFE AND WARM NEST FOR THE LITTLE ONE"},
+        {"CARE IN MOVEMENT", "*CARRYING DUES*", "LIFTING AND HOLDING WITH GENTLENESS AND LOVE"},
+        {"MOTHER'S HEALTH AND WELL-BEING", "*HEALTH DUES*", "FOSTERING THE WELLNESS OF MOTHER FOR THE CHILD'S SAKE"},
+        {"GENTLE SOUND AND LIGHT", "*CALM DUES*", "SETTING A PEACEFUL ENVIRONMENT FOR REST AND GROWTH"},
+        {"HEEDING NATURE'S RHYTHM", "*RHYTHM DUES*", "RESPECTING THE NATURAL CYCLE OF SLEEP AND WAKE"},
+        {"WATCHFUL EYES", "*GUARD DUES*", "STAYING EVER VIGILANT TO THE CHILD'S NEEDS"},
+        {"LOVE AND AFFECTION", "*HUG DUES*", "SHOWING WARMTH AND BOND TO THE NEWBORN"},
+        {"HEALTHY AIR AND SPACE", "*BREATHE DUES*", "ENSURING PURE AIR FOR THE LITTLE ONES TO THRIVE"},
+        {"KNOWING TOUCH", "*TOUCH DUES*", "MAKING CONNECTION THROUGH GENTLE HANDS"},
+        {"PROTECTION FROM HARM", "*SHIELD DUES*", "KEEPING SAFE FROM ALL THAT MIGHT DO HARM"},
+        {"TEACHING OF SOUNDS", "*SINGING DUES*", "FOSTERING EARLY SOUNDS AND SONGS FOR JOY"},
+        {"NURTURE OF GROWTH", "*GROWTH DUES*", "ENCOURAGING EACH SMALL STEP OF DEVELOPMENT"},
+        {"CLEAR SOUL CONNECTION", "*LOVE DUES*", "BINDING HEARTS IN THE BOND OF LOVE AND TRUST"},
+        {"SAFE TRANSITIONS", "*SWADDLING DUES*", "PROVIDING SECURITY IN MOVEMENTS AND REST"},
+        {"WARMTH OF THE BODY", "*BLANKET DUES*", "WRAPPING IN SOFTNESS AND COMFORT"},
+        {"SHARING OF LIGHT", "*SUN DUES*", "ALLOWING THE GLOW OF DAY FOR LIFE'S GROWTH"},
+        {"REVERENCE FOR LIFE", "*WONDER DUES*", "FOSTERING AWE FOR THE MIRACLE OF NEW LIFE"},
+        {"CARE IN SICKNESS", "*HEALING DUES*", "GIVING ATTENTION IN TIMES OF ILLNESS"},
+        {"PREPARING FOR FUTURE", "*HOPE DUES*", "LAYING FOUNDATIONS FOR A PROMISING LIFE"}
+    };
+
+    displayDuties(duties);
+    displayConclusion();
+
+    return 0;
+}
